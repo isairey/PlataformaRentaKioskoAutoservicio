@@ -2,7 +2,7 @@
 
 <img width="220" src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" />
 
-# 🛠️ 2C Rentals — Equipment Rental System
+# 🛠️ PlataformaRentaKioskoAutoservicio — Equipment Rental System
 
 ### Plataforma de renta de equipos con kiosco autoservicio y panel administrativo ⚡
 
@@ -424,27 +424,7 @@ Active → Overdue → Returned / Cancelled
 
 ---
 
-# 📸 Vista previa
 
-## 🖥️ Interfaces del sistema
-
-<div align="center">
-
-### 🛒 Kiosco de renta
-![Kiosk](https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200)
-
-### 📦 Gestión de equipos
-![Inventory](https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200)
-
-### 👨‍💼 Dashboard administrativo
-![Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200)
-
-### 🗄️ Base de datos y sistema
-![Database](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=1200)
-
-</div>
-
----
 
 # 🧠 Objetivos del proyecto
 
@@ -530,6 +510,6 @@ Proyecto orientado al aprendizaje y desarrollo de sistemas administrativos moder
 
 <div align="center">
 
-### 🛠️ 2C Rentals — gestión moderna de renta de equipos ⚡
+### 🛠️ PlataformaRentaKioskoAutoservicio — gestión moderna de renta de equipos ⚡
 
 </div>
