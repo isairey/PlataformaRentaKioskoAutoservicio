@@ -1,287 +1,535 @@
 <div align="center">
 
-<h1>2C Rentals &mdash; Equipment Rental System</h1>
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" />
 
-<em>A self-service kiosk and admin portal for small equipment rental businesses, built with VB.NET and Windows Forms.</em>
+# 🛠️ 2C Rentals — Equipment Rental System
 
-[![Language](https://img.shields.io/badge/language-VB.NET-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)
-[![Framework](https://img.shields.io/badge/.NET-10.0--windows-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)
-[![Database](https://img.shields.io/badge/MySQL-8%2B-4479A1?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=flat-square&logo=windows)](https://www.microsoft.com/windows)
+### Plataforma de renta de equipos con kiosco autoservicio y panel administrativo ⚡
 
-<br/>
+<p align="center">
+  <b>2C Rentals</b> es un sistema de escritorio desarrollado con VB.NET y Windows Forms para la administración de renta de equipos, reservas, inventario y operaciones administrativas en tiempo real.
+</p>
 
-[![VB.NET](https://img.shields.io/badge/VB.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
-[![Windows Forms](https://img.shields.io/badge/WinForms-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/)
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+<p align="center">
+  <img src="https://img.shields.io/badge/VB.NET-Windows_App-512BD4?style=for-the-badge&logo=dotnet&logoColor=white">
+  <img src="https://img.shields.io/badge/Windows_Forms-Desktop_UI-0078D6?style=for-the-badge&logo=windows&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+  <img src="https://img.shields.io/badge/.NET-10.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white">
+</p>
+
+<p align="center">
+  <a href="#-acerca-del-proyecto">Acerca</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a> •
+  <a href="#-vista-previa">Vista previa</a>
+</p>
 
 </div>
 
 ---
 
-## Overview
+# 🌌 Acerca del proyecto
 
-**2C Rentals** is a Windows desktop application built for a small equipment rental business. It provides a touch-friendly self-service kiosk where customers can browse available gear, build a cart, and complete a rental booking -- all without staff involvement. A separate, password-protected admin portal lets staff manage the equipment catalog, monitor active and overdue rentals, and process returns or cancellations with automatic stock restoration.
+**2C Rentals** es un sistema moderno de administración de renta de equipos diseñado para pequeñas empresas que necesitan automatizar reservas, control de inventario y administración de clientes.
 
-**Core features:**
+El proyecto fue construido utilizando:
 
-- **Self-service kiosk** -- customers browse equipment cards by category, adjust quantities, set rental days, and check out independently
-- **Atomic bookings** -- a single MySQL transaction inserts the customer, rental header, and all line items, then decrements stock with an oversell guard
-- **Auto-generated booking codes** -- unique `BK-YYYYMMDD-NNNN` identifiers assigned per booking
-- **Admin dashboard** -- live stats cards (Active, Overdue, Today's Bookings), filterable rentals grid, and one-click Return/Cancel with stock restoration
-- **Equipment CRUD** -- add, edit, and soft-delete equipment items from the admin portal without orphaning historical rental records
-- **Secure authentication** -- admin passwords are stored and compared as SHA-256 hashes; plaintext is never persisted
+- 🖥️ Windows Forms
+- ⚡ VB.NET
+- 🗄️ MySQL
+- 🔐 Seguridad SHA-256
+- 📦 Arquitectura por capas
+- 🛠️ Sistema CRUD administrativo
 
----
+El sistema incluye:
 
-## Tech Stack
-
-| Technology                                | Version                  | Category  | Purpose                                           |
-| ----------------------------------------- | ------------------------ | --------- | ------------------------------------------------- |
-| VB.NET                                    | --                       | Language  | Application language                              |
-| .NET                                      | 10.0 (`net10.0-windows`) | Framework | Runtime and SDK                                   |
-| Windows Forms                             | built-in                 | UI        | Desktop GUI layer                                 |
-| MySQL                                     | 8.0+                     | Database  | Persistent data store -- schema `twoc_rentals_db` |
-| MySql.Data                                | 9.6.0                    | DB Driver | ADO.NET connector for MySQL                       |
-| System.Configuration.ConfigurationManager | 9.0.4                    | Config    | Reads connection string from `App.config`         |
-| System.Security.Cryptography              | built-in                 | Security  | SHA-256 password hashing                          |
+- 🛒 Kiosco autoservicio para clientes
+- 👨‍💼 Portal administrativo protegido
+- 📋 Gestión completa de inventario
+- 📅 Reservas automáticas
+- 🔄 Restauración de stock
+- 🔐 Autenticación segura
 
 ---
 
-## File & Directory Structure
+# ✨ Características
 
-```
+## 🛒 Kiosco autoservicio
+
+- 📦 Navegación de equipos
+- 🧾 Carrito de renta
+- 📅 Selección de días
+- ⚡ Reservas rápidas
+- 👤 Registro de clientes
+- 🖥️ Interfaz táctil amigable
+
+---
+
+## 👨‍💼 Panel administrativo
+
+- 📊 Dashboard administrativo
+- 📋 Gestión de reservas
+- 🔄 Retorno y cancelación
+- 📈 Estadísticas en tiempo real
+- 📦 Administración de inventario
+- 🛠️ CRUD completo de equipos
+
+---
+
+## 🔐 Seguridad
+
+- 🔑 Autenticación administrativa
+- 🔒 Contraseñas SHA-256
+- 🛡️ Protección de accesos
+- ⚡ Validaciones seguras
+- 🗄️ Consultas SQL parametrizadas
+
+---
+
+## 📦 Gestión de inventario
+
+- ➕ Registro de equipos
+- 📋 Edición de productos
+- ❌ Soft delete
+- 📊 Control de stock
+- 💰 Tarifas por día
+- 📅 Disponibilidad dinámica
+
+---
+
+# 👨‍💻 Módulos del sistema
+
+## 🛒 Customer Kiosk Module
+
+Módulo de autoservicio para clientes.
+
+### Funcionalidades:
+
+- 📦 Explorar equipos
+- ➕ Agregar al carrito
+- 📅 Configurar días de renta
+- 🧾 Checkout
+- 🔖 Generación automática de booking code
+
+---
+
+## 👨‍💼 Admin Dashboard Module
+
+Módulo administrativo principal.
+
+### Funcionalidades:
+
+- 📊 Estadísticas generales
+- 📋 Gestión de reservas
+- 🔄 Retorno de equipos
+- ❌ Cancelaciones
+- ⚡ Actualización de estados
+
+---
+
+## 📦 Equipment Management Module
+
+Módulo de inventario.
+
+### Funcionalidades:
+
+- ➕ Agregar equipos
+- ✏️ Editar equipos
+- 🗑️ Desactivar productos
+- 📊 Gestión de stock
+- 💰 Tarifas dinámicas
+
+---
+
+## 🔐 Authentication Module
+
+Sistema de autenticación.
+
+### Funcionalidades:
+
+- 🔑 Login administrativo
+- 🔒 Hash SHA-256
+- 🛡️ Validación segura
+- 👨‍💼 Gestión de administradores
+
+---
+
+# 🛠️ Tecnologías utilizadas
+
+## ⚙️ Backend / Desktop
+
+<p>
+  <img src="https://skillicons.dev/icons?i=dotnet,windows" />
+</p>
+
+- VB.NET
+- .NET 10
+- Windows Forms
+- Arquitectura por capas
+- Desktop Development
+
+---
+
+## 🗄️ Base de datos
+
+<p>
+  <img src="https://skillicons.dev/icons?i=mysql" />
+</p>
+
+- MySQL 8+
+- Persistencia relacional
+- Transacciones SQL
+- Gestión de inventario
+- Relaciones FK
+
+---
+
+## 🔐 Seguridad
+
+<p>
+  <img src="https://skillicons.dev/icons?i=github" />
+</p>
+
+- SHA-256 Hashing
+- Validación segura
+- SQL parametrizado
+- Protección de credenciales
+
+---
+
+## 🧰 Herramientas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,vscode,visualstudio" />
+</p>
+
+- Git
+- GitHub
+- Visual Studio
+- NuGet
+- Windows SDK
+
+---
+
+# 📂 Estructura del proyecto
+
+```bash
 Equipment-Rental-System/
-+-- ERS.slnx                          # Visual Studio solution file
-\-- ERS/
-    +-- App.config                     # Connection string (key: TwoCRentals)
-    +-- ERS.vbproj                     # SDK-style project -- framework & NuGet refs
-    +-- setup_database.sql             # Full schema creation + seed data
-    |
-    +-- [Data Models]
-    +-- EquipmentItem.vb               # POCO: equipment fields + IsAvailable property
-    +-- CartItem.vb                    # POCO: holds EquipmentItem ref, qty, LineTotal()
-    |
-    +-- [Business / Service Layer]
-    +-- DBConnection.vb                # Factory: returns MySqlConnection from App.config
-    +-- HashHelper.vb                  # Utility: SHA-256 hex-string computation
-    +-- RentalManager.vb               # Customer ops: load catalog, CreateBooking()
-    +-- AdminManager.vb                # Admin ops: auth, stats, rental CRUD, equipment CRUD
-    |
-    +-- [Customer-Facing Forms]
-    +-- FrmKiosk.vb                    # Equipment browser, cart sidebar, rental-days stepper
-    +-- FrmKiosk.Designer.vb           # Designer-managed static controls
-    +-- FrmCheckout.vb                 # Customer name/contact + rental date pickers
-    +-- FrmConfirmation.vb             # Booking confirmed screen (displays booking code)
-    |
-    +-- [Admin Forms]
-    +-- FrmAdminLogin.vb               # Username + password entry (SHA-256 verified)
-    +-- FrmAdminDashboard.vb           # Stats cards + rentals grid + return/cancel actions
-    +-- FrmManageEquipment.vb          # Equipment CRUD (name, category, rate, stock, icon)
-    |
-    \-- My Project/
-        \-- Application.myapp          # WinForms startup configuration
+│
+├── ERS.slnx
+├── ERS/
+│   ├── App.config
+│   ├── setup_database.sql
+│   ├── DBConnection.vb
+│   ├── RentalManager.vb
+│   ├── AdminManager.vb
+│   ├── HashHelper.vb
+│   ├── EquipmentItem.vb
+│   ├── CartItem.vb
+│   │
+│   ├── FrmKiosk.vb
+│   ├── FrmCheckout.vb
+│   ├── FrmConfirmation.vb
+│   │
+│   ├── FrmAdminLogin.vb
+│   ├── FrmAdminDashboard.vb
+│   ├── FrmManageEquipment.vb
+│   │
+│   └── My Project/
+│
+├── README.md
+└── LICENSE
 ```
-
-**Key directories and why the project is structured this way:**
-
-- **Business/Service layer** (`DBConnection`, `RentalManager`, `AdminManager`, `HashHelper`) -- all SQL lives here, keeping form code completely free of database logic and making queries easy to locate and test in isolation.
-- **Data models** (`EquipmentItem`, `CartItem`) -- plain VB classes (POCOs) with no dependencies, passed between layers as typed containers.
-- **Customer forms** (`FrmKiosk` -> `FrmCheckout` -> `FrmConfirmation`) -- a linear wizard flow; each form is opened as a dialog by the previous one, keeping navigation state simple.
-- **Admin forms** (`FrmAdminLogin` -> `FrmAdminDashboard` -> `FrmManageEquipment`) -- separate flow launched from the kiosk via F12, keeping staff and customer surfaces cleanly isolated.
 
 ---
 
-## Architecture & How the Code Works Together
+# 🏗️ Arquitectura del sistema
 
-The project uses a **layered desktop architecture**: UI forms call into static service classes, which use a single database-connection factory to execute parameterized SQL against MySQL.
+El proyecto utiliza una arquitectura por capas donde:
 
-### End-to-end request flow
-
-**Customer booking:**
-
-> User browses equipment on `FrmKiosk` -> selects items and quantities -> adjusts rental days -> clicks **Checkout** -> `FrmCheckout` collects name, contact, and dates -> calls `RentalManager.CreateBooking()` -> single MySQL transaction inserts customer, rental header, line items, and decrements stock -> `FrmConfirmation` displays the booking code.
-
-**Admin operation:**
-
-> Staff presses **F12** on the kiosk -> `FrmAdminLogin` hashes the submitted password and queries `admins` table -> on success, `FrmAdminDashboard` opens, calls `AdminManager.UpdateOverdueRentals()` and `AdminManager.GetStats()` -> staff selects a rental and clicks **Return** or **Cancel** -> `AdminManager.ReturnRental()` / `CancelRental()` restores stock and updates status in a single transaction.
-
-### Layer communication
-
-```mermaid
-graph TD
-    A[FrmKiosk] -->|browse / add to cart| B[RentalManager]
-    A -->|open checkout| C[FrmCheckout]
-    C -->|CreateBooking| B
-    B --> E[DBConnection]
-    D[FrmAdminLogin] -->|ValidateLogin| F[AdminManager]
-    F --> E
-    F -->|opens| G[FrmAdminDashboard]
-    G -->|Return / Cancel| F
-    G -->|opens| H[FrmManageEquipment]
-    H -->|Add / Update / Delete| F
-    E -->|MySqlConnection| I[(MySQL: twoc_rentals_db)]
-```
-
-### Key design decisions
-
-| Mechanism                  | Detail                                                                                                                                                                                                                                                         |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Atomic booking**         | `RentalManager.CreateBooking()` wraps four INSERTs/UPDATEs in one transaction. The stock `UPDATE` uses `WHERE avail_stock >= @qty` -- if 0 rows are affected, an `InvalidOperationException` is raised and the transaction rolls back, preventing overselling. |
-| **Booking codes**          | `BK-YYYYMMDD-NNNN` -- the sequential suffix is derived by counting same-day bookings already in the database (e.g., `BK-20260416-0003`).                                                                                                                       |
-| **Admin auth**             | `AdminManager.ValidateLogin()` calls `HashHelper.ComputeSHA256()` before the SELECT; no plaintext passwords are ever stored or compared.                                                                                                                       |
-| **Overdue detection**      | `AdminManager.UpdateOverdueRentals()` runs `UPDATE rentals SET status='Overdue' WHERE rental_end < CURDATE() AND status='Active'` on every dashboard open -- accurate without a scheduled job.                                                                 |
-| **Soft delete**            | `AdminManager.DeleteEquipment()` sets `is_active = 0`, preserving `rental_details` FK integrity for historical bookings. The kiosk query filters `WHERE is_active = 1`.                                                                                        |
-| **Runtime UI in FrmKiosk** | Category filter pills (`AddFilterPills()`) and equipment cards (`RenderGrid()`) are built entirely at runtime; they are not visible in the Visual Studio Forms Designer -- this is intentional.                                                                |
+- 🖥️ Las interfaces WinForms manejan la UI
+- ⚡ Los servicios administran lógica de negocio
+- 🗄️ MySQL almacena los datos
+- 🔐 HashHelper protege credenciales
+- 📦 Los modelos representan entidades
 
 ---
 
-## Getting Started
+# 🔄 Flujo del sistema
 
-### Prerequisites
+## 🛒 Reserva de cliente
 
-- **[.NET SDK](https://dotnet.microsoft.com/download)** >= 10.0
-- **[MySQL Server](https://dev.mysql.com/downloads/mysql/)** >= 8.0
-- **Windows OS** -- WinForms targets `net10.0-windows` and runs on Windows only
+```text
+Cliente → Kiosco → Carrito → Checkout → MySQL → Confirmación
+```
 
-### Installation
+---
 
-**1. Clone the repository**
+## 👨‍💼 Operación administrativa
+
+```text
+Admin → Login → Dashboard → Gestión → Actualización MySQL
+```
+
+---
+
+# ⚡ Instalación
+
+## 📋 Requisitos
+
+- Windows 10/11
+- .NET SDK 10+
+- MySQL 8+
+- Visual Studio
+- Git
+
+---
+
+# 🚀 Configuración del proyecto
+
+## 1️⃣ Clonar repositorio
 
 ```bash
 git clone https://github.com/Tways-study/Equipment-Rental-System.git
+```
+
+---
+
+## 2️⃣ Entrar al proyecto
+
+```bash
 cd Equipment-Rental-System
 ```
 
-**2. Create the database**
+---
 
-The script creates the `twoc_rentals_db` database, all five tables, six sample equipment items, and a default admin account.
+## 3️⃣ Crear base de datos
 
 ```bash
 mysql -u YOUR_MYSQL_USER -p < ERS/setup_database.sql
 ```
 
-**3. Configure the connection string**
+---
 
-Open `ERS/App.config` and replace the credentials with your own:
+## 4️⃣ Configurar App.config
 
 ```xml
 <connectionStrings>
   <add name="TwoCRentals"
-       connectionString="Server=localhost;Database=twoc_rentals_db;Uid=YOUR_USER;Pwd=YOUR_PASSWORD;CharSet=utf8mb4;"
+       connectionString="Server=localhost;Database=twoc_rentals_db;Uid=YOUR_USER;Pwd=YOUR_PASSWORD;"
        providerName="MySql.Data.MySqlClient" />
 </connectionStrings>
 ```
 
-> `CharSet=utf8mb4` is required -- equipment icon tags are stored as emoji.
+---
 
-**4. Restore NuGet packages**
+## 5️⃣ Restaurar paquetes
 
 ```bash
 dotnet restore
 ```
 
-Fetches `MySql.Data` (v9.6.0) and `System.Configuration.ConfigurationManager` (v9.0.4).
+---
 
-### Environment / Configuration
-
-`App.config` is the only configuration file. It must **never** be committed with real credentials.
-
-| Key        | Description    | Required | Where to obtain                               |
-| ---------- | -------------- | -------- | --------------------------------------------- |
-| `Server`   | MySQL hostname | Yes      | Your MySQL server address (e.g., `localhost`) |
-| `Database` | Schema name    | Yes      | Fixed: `twoc_rentals_db`                      |
-| `Uid`      | MySQL username | Yes      | Your MySQL user account                       |
-| `Pwd`      | MySQL password | Yes      | Your MySQL user password                      |
-| `CharSet`  | Character set  | Yes      | Must be `utf8mb4` for emoji support           |
-
-### Running the Project
-
-**Development**
+## 6️⃣ Ejecutar proyecto
 
 ```bash
 dotnet run --project ERS/ERS.vbproj
 ```
 
-`FrmKiosk` opens as the startup form. Press **F12** anywhere on the kiosk to open the admin login dialog.
+---
 
-**Production -- self-contained publish**
+# 📊 Funcionalidades principales
 
-Produces a folder deployable to any Windows machine without a pre-installed .NET runtime:
+## 📦 Inventario
+
+- Gestión de equipos
+- Disponibilidad dinámica
+- Tarifas por día
+- Soft delete
+
+---
+
+## 📅 Reservas
+
+- Booking automático
+- Control de fechas
+- Generación de códigos
+- Transacciones atómicas
+
+---
+
+## 🔐 Seguridad
+
+- Login seguro
+- SHA-256
+- SQL parametrizado
+- Protección administrativa
+
+---
+
+## 📈 Dashboard
+
+- Reservas activas
+- Equipos vencidos
+- Estadísticas
+- Gestión rápida
+
+---
+
+# 🗄️ Base de datos
+
+## 📦 Tablas principales
+
+```text
+customers
+equipment
+rentals
+rental_details
+admins
+```
+
+---
+
+## 🔄 Estados de renta
+
+```text
+Active → Overdue → Returned / Cancelled
+```
+
+---
+
+# 👨‍💼 Credenciales por defecto
+
+| Campo | Valor |
+|------|------|
+| Usuario | `admin` |
+| Password | Configurado en `setup_database.sql` |
+
+⚠️ Se recomienda cambiar la contraseña después del primer inicio de sesión.
+
+---
+
+# 🧪 Testing y validación
+
+## 🔍 Casos probados
+
+- ✔️ Reservas simultáneas
+- ✔️ Restauración de stock
+- ✔️ Login administrativo
+- ✔️ Gestión CRUD
+- ✔️ Validación SQL
+- ✔️ Control de disponibilidad
+
+---
+
+# 📸 Vista previa
+
+## 🖥️ Interfaces del sistema
+
+<div align="center">
+
+### 🛒 Kiosco de renta
+![Kiosk](https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200)
+
+### 📦 Gestión de equipos
+![Inventory](https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200)
+
+### 👨‍💼 Dashboard administrativo
+![Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200)
+
+### 🗄️ Base de datos y sistema
+![Database](https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=1200)
+
+</div>
+
+---
+
+# 🧠 Objetivos del proyecto
+
+## 🎯 Aprendizaje y desarrollo
+
+- Desarrollo desktop moderno
+- Arquitectura por capas
+- Integración MySQL
+- Gestión de inventarios
+- Sistemas CRUD
+- Seguridad en aplicaciones
+- Diseño WinForms profesional
+
+---
+
+# 🚧 Roadmap
+
+## 🔮 Próximas mejoras
+
+- ☁️ Sincronización cloud
+- 📱 Aplicación móvil
+- 💳 Sistema de pagos
+- 📊 Reportes PDF
+- 📧 Notificaciones email
+- 🌐 API REST
+- 🤖 Recomendaciones inteligentes
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Fork del proyecto
 
 ```bash
-dotnet publish ERS/ERS.vbproj -c Release -r win-x64 --self-contained true
+git checkout -b feature/nueva-funcionalidad
 ```
 
-Output: `ERS/bin/Release/net10.0-windows/win-x64/publish/ERS.exe`
+2. Commit
 
----
-
-## Database Schema
-
-```
-customers
-  customer_id (PK) | full_name | contact_no | created_at
-
-equipment
-  equipment_id (PK) | name | category | daily_rate
-  total_stock | avail_stock | icon_tag | is_active
-
-rentals
-  rental_id (PK) | booking_code (UNIQUE) | customer_id (FK)
-  rental_start | rental_end | security_dep | subtotal
-  total_amount | status | created_at
-
-rental_details
-  detail_id (PK) | rental_id (FK) | equipment_id (FK)
-  quantity | daily_rate | days_rented | line_total
-
-admins
-  admin_id (PK) | username (UNIQUE) | password_hash | full_name
+```bash
+git commit -m "✨ Nueva funcionalidad"
 ```
 
-Rental `status` lifecycle: `Active` -> `Overdue` (auto-flagged) -> `Returned` or `Cancelled`.
+3. Push
 
----
-
-## Default Admin Credentials
-
-| Field    | Value                                                             |
-| -------- | ----------------------------------------------------------------- |
-| Username | `admin`                                                           |
-| Password | _(see `setup_database.sql` -- **change this after first login**)_ |
-
-To add additional admin accounts:
-
-```sql
-INSERT INTO admins (username, password_hash, full_name)
-VALUES ('newuser', SHA2('your_chosen_password', 256), 'Full Name');
+```bash
+git push origin feature/nueva-funcionalidad
 ```
 
----
-
-## Troubleshooting
-
-| Symptom                                         | Fix                                                                                        |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Build error `MSB3027` / `MSB3021` (file locked) | Close any running `ERS.exe` instance before rebuilding.                                    |
-| Equipment icons show as `?` boxes               | Ensure `CharSet=utf8mb4` is in the connection string and MySQL uses a `utf8mb4` collation. |
-| `MySqlException: Access denied` on launch       | Verify `Uid` and `Pwd` in `App.config` match your MySQL user.                              |
-| `Unknown database 'twoc_rentals_db'`            | Re-run `setup_database.sql` against the correct MySQL server instance.                     |
-| Dynamic cards/pills not visible in designer     | These controls are built in code at runtime -- run the project to see them.                |
+4. Pull Request 🚀
 
 ---
 
-## Contributing
+# 👨‍💻 Desarrollador
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/your-feature-name`
-3. Commit your changes with a descriptive message: `git commit -m "Add: brief description"`
-4. Push to your fork: `git push origin feature/your-feature-name`
-5. Open a Pull Request against the `main` branch describing what was changed and why.
+<div align="center">
+
+## Isai Reyes — Full Stack Developer
+
+Desarrollador apasionado por aplicaciones de escritorio, sistemas administrativos y arquitecturas modernas 🚀
+
+</div>
 
 ---
 
-## License
+# 🌟 Apoya el proyecto
 
-No license file detected. All rights reserved.
+⭐ Dale una estrella  
+🍴 Haz fork  
+📢 Comparte el proyecto
+
+---
+
+# 📜 Licencia
+
+Proyecto orientado al aprendizaje y desarrollo de sistemas administrativos modernos con VB.NET y MySQL.
+
+---
+
+<div align="center">
+
+### 🛠️ 2C Rentals — gestión moderna de renta de equipos ⚡
+
+</div>
