@@ -215,7 +215,7 @@ Sistema de autenticación.
 # 📂 Estructura del proyecto
 
 ```bash
-Equipment-Rental-System/
+PlataformaRentaKioskoAutoservicio/
 │
 ├── ERS.slnx
 ├── ERS/
@@ -291,7 +291,7 @@ Admin → Login → Dashboard → Gestión → Actualización MySQL
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/Tways-study/Equipment-Rental-System.git
+git clone https://github.com/isairey/PlataformaRentaKioskoAutoservicio.git
 ```
 
 ---
@@ -299,7 +299,7 @@ git clone https://github.com/Tways-study/Equipment-Rental-System.git
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd Equipment-Rental-System
+cd PlataformaRentaKioskoAutoservicio
 ```
 
 ---
